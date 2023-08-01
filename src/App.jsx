@@ -11,7 +11,7 @@ function App() {
   const nextPlayer = isXNext ? 'X' : 'O';
   const statusMessage = winner
     ? `Winner is ${winner}`
-    : `nextPlayer is ${nextPlayer}`;
+    : `NextPlayer is ${nextPlayer}`;
 
   console.log(winner);
 
