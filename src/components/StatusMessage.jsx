@@ -1,12 +1,12 @@
-import Square from './Square';
-// import PropTypes from "prop-types";
+const StatusMessage = ({ winner, gamingBoard }) => {
+  const { squares, isXNext } = gamingBoard;
 
-const StatusMessage = ({ winner, isXNext, squares }) => {
   const noMovesLeft = squares.every(squareValue => squareValue !== null);
   const nextPlayer = isXNext ? 'X' : 'O';
-  const statusMessage = winner
-    ? `Winner is ${winner}`
-    : `NextPlayer is ${nextPlayer}`;
+
+  // const statusMessage = winner
+  //   ? `Winner is ${winner}`
+  //   : `NextPlayer is ${nextPlayer}`;
 
   const renderstatusMessage = () => {
     if (winner) {
@@ -45,10 +45,3 @@ const StatusMessage = ({ winner, isXNext, squares }) => {
 };
 
 export default StatusMessage;
-
-// StatusMessage.propTypes = {
-//   item: PropTypes.object.isRequired,
-//   onItemClick: PropTypes.func.isRequired,
-//   viewState: PropTypes.object,
-//   selectedItem:PropTypes.object
-// };
